@@ -1,0 +1,5 @@
+This is an ActiveRecord JDBC adapter for the MaxDB database.
+Copyright 2013 SAP AG.
+
+This project includes software developed at
+SAP AG (http://www.sap.com/).
