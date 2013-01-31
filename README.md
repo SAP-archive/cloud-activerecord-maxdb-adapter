@@ -36,3 +36,14 @@ JNDI setting is supported as well (this is coming from the generic AR-JDBC Adapt
 	  
 	  
 ## Known issues
+
+If you have an User model in your application, which most probably means that it should be
+mapped to a Users table (ActiveRecord pluralization is used by convention), you might
+encounter issues with using the adapter. We recommend you to override the default mapping
+behavour, for example by adding this line in config/application.rb (or config/environment.rb):
+
+    config.active_record.table_name_prefix = <some_prefix>
+
+or by just turning off the table name pluralization:
+
+    config.active_record.pluralize_table_names = false
