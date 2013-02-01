@@ -7,6 +7,8 @@ https://github.com/jruby/activerecord-jdbc-adapter).
 
 This gem requires the [jdbc-maxdb gem](https://github.com/sapnwcloudlabs/jdbc-maxdb-gem).
 
+The adapter works for Rails 3.
+
 To install the gem you would have to build it from source:
 
     jruby -S gem build activerecord-maxdb-adapter.gemspec
@@ -47,3 +49,5 @@ behavour, for example by adding this line in config/application.rb (or config/en
 or by just turning off the table name pluralization:
 
     config.active_record.pluralize_table_names = false
+
+Any other modification which makes the table name different from Users will do.
