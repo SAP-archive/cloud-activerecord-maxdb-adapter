@@ -12,7 +12,7 @@ The adapter works for Rails 3.
 To install the gem you would have to build it from source:
 
     jruby -S gem build activerecord-maxdb-adapter.gemspec
-	jruby -S gem install activerecord-maxdb-adapters
+	jruby -S gem install activerecord-maxdb-adapter
 
 	
 To use it add this in your database.yml configuration:
