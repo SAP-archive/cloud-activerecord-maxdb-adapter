@@ -7,7 +7,8 @@ https://github.com/jruby/activerecord-jdbc-adapter).
 
 This gem requires the [jdbc-maxdb gem](https://github.com/sapnwcloudlabs/jdbc-maxdb-gem).
 
-The adapter works for Rails 3.
+The adapter works for Rails 3. It uses [Arel](https://github.com/rails/arel) so it probably
+won't work with Rails 2.
 
 To install the gem you would have to build it from source:
 
