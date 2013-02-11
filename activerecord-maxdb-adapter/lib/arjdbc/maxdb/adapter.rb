@@ -67,12 +67,23 @@ module ::ArJdbc
 	# and use the idx_tableName_columnName pattern for naming the indexes. This worked for our use case.
 	
 	def add_index(table_name, column_name, options = {})
+
+      # In case the index is a composite one, the column_name argument is an
+      # array of all the column names that constitute the index
+      if column_name.is_a? (Array)
+        suffix_name = column_name.join('_')
+        column_list = column_name.join(", ")
+      else
+        suffix_name = column_name
+        column_list = column_name
+      end
+
 	  statement = "CREATE"
 	  statement << " UNIQUE " if options[:unique]
-	  statement << " INDEX idx_" + "#{table_name}" + "_" + "#{column_name}"
-	  statement << " ON #{table_name}(#{column_name})"
+	  statement << " INDEX idx_" + "#{table_name}" + "_" + "#{suffix_name}"
+	  statement << " ON #{table_name}(#{column_list})"
 	  execute statement
-	end
+    end
 	
 	# We got a 'non existing method' error, so we had to implement this method as well. Basically, it introduces a NULL
     # or a NOT NULL constraint on a given table and column, depending on the value of the boolean 'null' parameter
