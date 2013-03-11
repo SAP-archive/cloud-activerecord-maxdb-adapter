@@ -39,7 +39,7 @@ JNDI setting is supported as well (this is coming from the generic AR-JDBC Adapt
 	  
 ## Known issues
 
-If you have an *User* model in your application (*app/models/user.rb*), which most probably means that it should be
+If you have an *User* model in your application - *app/models/user.rb* - which most probably means that it should be
 mapped to a *Users* table (ActiveRecord pluralization is used by convention), you might
 encounter issues with using the adapter. We recommend you to override the default mapping
 behavior, for example by adding this line in *config/application.rb* (or *config/environment.rb*):
