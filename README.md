@@ -36,21 +36,7 @@ JNDI setting is supported as well (this is coming from the generic AR-JDBC Adapt
 	  jndi: java:comp/env/jdbc/myMaxDBDataSource
 	  pool: 5
 	  
-	  
-## Known issues
-
-If you have an *User* model in your application - *app/models/user.rb* - which most probably means that it should be
-mapped to a *Users* table (ActiveRecord pluralization is used by convention), you might
-encounter issues with using the adapter. We recommend you to override the default mapping
-behavior, for example by adding this line in *config/application.rb* (or *config/environment.rb*):
-
-* `config.active_record.table_name_prefix = <some_prefix>`
-
-or by just turning off the table name pluralization:
-
-* `config.active_record.pluralize_table_names = false`
-
-Any other modification which makes the table name different from *Users* will do.
+  
 
 ## Contributing
 

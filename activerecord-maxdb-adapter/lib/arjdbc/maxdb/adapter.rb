@@ -104,6 +104,29 @@ module ::ArJdbc
 	def adapter_name
 	  'maxdb'
 	end
+	
+	# Get the name of the user schema. Most of the times this would be the value of the 'username' in the
+    # configuration. But we support a dedicated 'schema' field as well.
+    def maxdb_schema
+      if @config[:schema]
+        @config[:schema].to_s
+      elsif @config[:username]
+        @config[:username].to_s
+      end
+    end
+
+    # Restrict this metadata query to the schema of the user.
+    def tables
+      @connection.tables(nil, maxdb_schema)
+    end
+
+    # Restrict this metadata query to the schema of the user. This fixes the problem of failing INSERTs
+    # which mix the columns of the application table USERS and MaxDB's system table DOMAIN.USERS
+    def columns(table_name, name = nil)
+      @connection.columns_internal(table_name.to_s, name, maxdb_schema)
+    end
+
+	
   end
 end
 
