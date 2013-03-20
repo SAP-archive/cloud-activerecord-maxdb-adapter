@@ -34,6 +34,7 @@ module ::ArJdbc
 	def modify_types(tp)
 	  tp[:primary_key] = "INTEGER NOT NULL DEFAULT SERIAL PRIMARY KEY"
 	  tp[:string] = { :name => 'VARCHAR', :limit => 255 }
+	  tp[:text] = { :name => 'VARCHAR', :limit => 5000 }
 	  tp[:integer] = { :name => 'INTEGER', :limit => nil }
 	  tp[:boolean]     = { :name => 'BOOLEAN' }
 	  tp
