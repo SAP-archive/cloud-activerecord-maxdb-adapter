@@ -126,6 +126,12 @@ module ::ArJdbc
     def columns(table_name, name = nil)
       @connection.columns_internal(table_name.to_s, name, maxdb_schema)
     end
+	
+	# MaxDB does not support COALESCE function/operator. We use VALUE instead.
+    def exec_update(sql, name, binds)
+      sql.gsub!(/COALESCE/i, 'VALUE')
+      super(sql, name, binds)
+    end
 
 	
   end
