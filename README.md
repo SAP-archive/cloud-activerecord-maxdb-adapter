@@ -41,3 +41,7 @@ JNDI setting is supported as well (this is coming from the generic AR-JDBC Adapt
 ## Contributing
 
 This is an open source project under the Apache 2.0 license, and every contribution is welcome. Issues, pull-requests and other discussions are welcome and expected to take place here. 
+
+## Wiki page
+
+You can check [this wiki page](https://github.com/sapnwcloudlabs/activerecord-maxdb-adapter/wiki/Creating-ActiveRecord-JDBC-adapters) for more details of how we created this adapter.
