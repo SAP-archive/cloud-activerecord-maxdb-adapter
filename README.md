@@ -5,7 +5,7 @@
 This is an ActiveRecord JDBC adapter for the [SAP MaxDB database](http://maxdb.sap.com/). It is intended to be used in JRuby environment
 only and it is an extension of the [ActiveRecord JDBC Adapter project](https://github.com/jruby/activerecord-jdbc-adapter).
 
-This gem requires the [jdbc-maxdb gem](https://github.com/sapnwcloudlabs/jdbc-maxdb-gem).
+This gem requires the [jdbc-maxdb gem](https://github.com/sap/cloud-jdbc-maxdb-gem).
 
 The adapter works for Rails 3. It uses [Arel](https://github.com/rails/arel) so it probably won't work with Rails 2.
 
@@ -44,4 +44,4 @@ This is an open source project under the Apache 2.0 license, and every contribut
 
 ## Wiki page
 
-You can check [this wiki page](https://github.com/sapnwcloudlabs/activerecord-maxdb-adapter/wiki/Creating-ActiveRecord-JDBC-adapters) for more details of how we created this adapter.
+You can check [this wiki page](https://github.com/sap/cloud-activerecord-maxdb-adapter/wiki/Creating-ActiveRecord-JDBC-adapters) for more details of how we created this adapter.
