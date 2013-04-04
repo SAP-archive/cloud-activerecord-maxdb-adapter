@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
 
   s.authors  = ["SAP AG"]
   s.email    = 'krum.bakalsky@sap.com'
-  s.homepage = 'https://github.com/sapnwcloudlabs/activerecord-maxdb-adapter'
+  s.homepage = 'https://github.com/SAP/cloud-activerecord-maxdb-adapter'
   s.require_paths = %w[lib]
   s.rdoc_options = ["--charset=UTF-8"]
   s.extra_rdoc_files = %w[README.md LICENSE]
